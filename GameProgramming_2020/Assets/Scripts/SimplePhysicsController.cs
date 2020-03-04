@@ -16,7 +16,7 @@ public class SimplePhysicsController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
     }
-
+    public float distance;
     public float speed = 5.0f;
     public float rotSpeed = 180.0f;
     public float rollResetSpeed = 0.5f;
@@ -30,7 +30,11 @@ public class SimplePhysicsController : MonoBehaviour
 
 
         //ADD CHECK FOR DISTANCE AND TRIGGER THE EXPLOSION HERE:
-
+        distance = Vector3.Magnitude(new Vector3(vInput, hInput, eInput));
+        if (distance >= 30.0f)
+        {
+            //Explosion code here
+        }
 
 
 

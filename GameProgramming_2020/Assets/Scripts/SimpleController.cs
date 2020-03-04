@@ -5,6 +5,7 @@ using UnityEngine;
 public class SimpleController : MonoBehaviour
 {
     // Start is called before the first frame update
+    
     void Start()
     {
     }
@@ -18,6 +19,8 @@ public class SimpleController : MonoBehaviour
         transform.Translate(0, Input.GetAxis("Elevate") * Time.deltaTime * speed, Input.GetAxis("Vertical") * Time.deltaTime * speed);
 
         transform.Rotate(0, Input.GetAxis("Horizontal") * Time.deltaTime * rotSpeed, 0);
+
+        
 
     }
 }
